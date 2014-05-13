@@ -10,4 +10,6 @@
 
 @interface ccViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UISegmentedControl *colorSegmentProp;
+
 @end

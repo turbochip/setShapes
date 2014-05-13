@@ -21,6 +21,7 @@
 		F173F268192060AB0057A524 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F173F24A192060AB0057A524 /* UIKit.framework */; };
 		F173F270192060AB0057A524 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F173F26E192060AB0057A524 /* InfoPlist.strings */; };
 		F173F272192060AB0057A524 /* setShapesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F173F271192060AB0057A524 /* setShapesTests.m */; };
+		F173F27D1920614F0057A524 /* ccSetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F173F27C1920614F0057A524 /* ccSetCardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		F173F26D192060AB0057A524 /* setShapesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "setShapesTests-Info.plist"; sourceTree = "<group>"; };
 		F173F26F192060AB0057A524 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F173F271192060AB0057A524 /* setShapesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = setShapesTests.m; sourceTree = "<group>"; };
+		F173F27B1920614F0057A524 /* ccSetCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccSetCardView.h; sourceTree = "<group>"; };
+		F173F27C1920614F0057A524 /* ccSetCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ccSetCardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +115,11 @@
 		F173F24C192060AB0057A524 /* setShapes */ = {
 			isa = PBXGroup;
 			children = (
-				F173F255192060AB0057A524 /* ccAppDelegate.h */,
-				F173F256192060AB0057A524 /* ccAppDelegate.m */,
 				F173F258192060AB0057A524 /* Main.storyboard */,
 				F173F25B192060AB0057A524 /* ccViewController.h */,
 				F173F25C192060AB0057A524 /* ccViewController.m */,
-				F173F25E192060AB0057A524 /* Images.xcassets */,
+				F173F27B1920614F0057A524 /* ccSetCardView.h */,
+				F173F27C1920614F0057A524 /* ccSetCardView.m */,
 				F173F24D192060AB0057A524 /* Supporting Files */,
 			);
 			path = setShapes;
@@ -126,6 +128,9 @@
 		F173F24D192060AB0057A524 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F173F25E192060AB0057A524 /* Images.xcassets */,
+				F173F255192060AB0057A524 /* ccAppDelegate.h */,
+				F173F256192060AB0057A524 /* ccAppDelegate.m */,
 				F173F24E192060AB0057A524 /* setShapes-Info.plist */,
 				F173F24F192060AB0057A524 /* InfoPlist.strings */,
 				F173F252192060AB0057A524 /* main.m */,
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F173F257192060AB0057A524 /* ccAppDelegate.m in Sources */,
+				F173F27D1920614F0057A524 /* ccSetCardView.m in Sources */,
 				F173F253192060AB0057A524 /* main.m in Sources */,
 				F173F25D192060AB0057A524 /* ccViewController.m in Sources */,
 			);
