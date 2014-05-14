@@ -25,8 +25,10 @@
     [[self.colorSegmentProp.subviews objectAtIndex:1] setBackgroundColor:[UIColor greenColor]];
     [[self.colorSegmentProp.subviews objectAtIndex:1] setTintColor:[UIColor blackColor]];
     [[self.colorSegmentProp.subviews objectAtIndex:2] setBackgroundColor:[UIColor redColor]];
-    
-    self.MainCardView=[[ccSetCardView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x+40, self.view.frame.origin.y+50, 250, 275)];
+
+    // card size in game is 57/80
+    self.MainCardView=[[ccSetCardView alloc] initWithFrame:CGRectMake(self.view.frame.origin.x+40, self.view.frame.origin.y+50,250,275)];
+
     self.MainCardView.backgroundColor=[UIColor whiteColor];
     [self.view addSubview:self.MainCardView];
     [self.MainCardView setNeedsDisplay];
