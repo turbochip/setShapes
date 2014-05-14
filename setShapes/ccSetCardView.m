@@ -151,12 +151,34 @@
             break;
         }
     }
+    if(self.cardQuantity>2)  soy=soy+(sh+CARDVERTICALSPACING);
     for(int i=0;i<self.cardQuantity;i++)
     {
-        if(i<2)
-            apath=[UIBezierPath bezierPathWithOvalInRect:CGRectMake(sox,soy-((sh+CARDVERTICALSPACING)*i),sw,sh)];
-        else
-            apath=[UIBezierPath bezierPathWithOvalInRect:CGRectMake(sox,soy+((sh+CARDVERTICALSPACING)*(i-1)),sw,sh)];
+        apath = [[UIBezierPath alloc] init];
+        
+        [apath moveToPoint:CGPointMake(sox, soy)];
+        [apath addCurveToPoint:CGPointMake(sox+sw, soy+sh-20)
+                 controlPoint1:CGPointMake(sox+(sw/2), soy)
+                 controlPoint2:CGPointMake(sox+(sw/2), soy+sh-15)];
+        
+        [apath addArcWithCenter:CGPointMake(sox+sw,soy+sh-10)
+                         radius:10
+                     startAngle:3*(2*M_PI/4)
+                       endAngle:1*(2*M_PI/4)
+                      clockwise:YES];
+        
+        [apath addCurveToPoint:CGPointMake(sox, soy+20)
+                 controlPoint1:CGPointMake(sox+(sw/2), soy+sh+20-15)
+                 controlPoint2:CGPointMake(sox+(sw/2), soy+20)];
+        
+        [apath addArcWithCenter:CGPointMake(sox,soy+10)
+                         radius:10
+                     startAngle:1*(2*M_PI/4)
+                       endAngle:3*(2*M_PI/4)
+                      clockwise:YES];
+        soy=soy-sh-CARDVERTICALSPACING;
+
+        [apath setLineWidth:3.0 ];
         [apath stroke];
         [apath fill];
     }
