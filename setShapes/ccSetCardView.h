@@ -18,4 +18,5 @@
 @property (nonatomic) NSInteger cardShape;
 @property (nonatomic) NSInteger cardFill;
 
+
 @end

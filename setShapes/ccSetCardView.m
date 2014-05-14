@@ -35,7 +35,7 @@
     switch(self.cardShape)
     {
         case 0:
-            [self drawSquare:rect];
+            [self drawDiamond:rect];
             break;
         case 1:
             [self drawCircle:rect];
@@ -48,7 +48,7 @@
 
 #define CARDVERTICALSPACING 10
 
-- (void) drawSquare:(CGRect)rect
+- (void) drawDiamond:(CGRect)rect
 {
     UIBezierPath *apath;
     CGFloat ccx=self.frame.size.width/2;    //card horizontal size x
@@ -75,12 +75,19 @@
             break;
         }
     }
+    
+    if(self.cardQuantity>2)  soy=soy+(sh+CARDVERTICALSPACING);
     for(int i=0;i<self.cardQuantity;i++)
     {
-        if(i<2)
-            apath=[UIBezierPath bezierPathWithRect:CGRectMake(sox,soy-((sh+CARDVERTICALSPACING)*i),sw,sh)];
-        else
-            apath=[UIBezierPath bezierPathWithRect:CGRectMake(sox,soy+((sh+CARDVERTICALSPACING)*(i-1)),sw,sh)];
+        apath=[[UIBezierPath alloc] init];
+        [apath moveToPoint:CGPointMake(sox+sw/2, soy)];
+        [apath addLineToPoint:CGPointMake(sox+sw,soy+sh/2)];
+        [apath addLineToPoint:CGPointMake(sox+sw/2, soy+sh)];
+        [apath addLineToPoint:CGPointMake(sox, soy+sh/2)];
+        [apath closePath];
+        soy=soy-sh-CARDVERTICALSPACING;
+        
+        [apath setLineWidth:3.0 ];
         [apath stroke];
         [apath fill];
     }
@@ -119,6 +126,7 @@
             apath=[UIBezierPath bezierPathWithOvalInRect:CGRectMake(sox,soy-((sh+CARDVERTICALSPACING)*i),sw,sh)];
         else
             apath=[UIBezierPath bezierPathWithOvalInRect:CGRectMake(sox,soy+((sh+CARDVERTICALSPACING)*(i-1)),sw,sh)];
+        [apath setLineWidth:3.0 ];
         [apath stroke];
         [apath fill];
     }

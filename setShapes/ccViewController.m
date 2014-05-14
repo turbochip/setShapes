@@ -44,6 +44,8 @@
     [self.MainCardView setNeedsDisplay];
 }
 - (IBAction)ColorSegment:(UISegmentedControl *)sender {
+    CGContextRef context=UIGraphicsGetCurrentContext();
+    CGContextSaveGState(context);
     switch(sender.selectedSegmentIndex) {
         case 0:
             self.MainCardView.cardColor=[UIColor redColor];
@@ -55,6 +57,7 @@
             self.MainCardView.cardColor=[UIColor purpleColor];
             break;
     }
+    CGContextRestoreGState(context);
     [self.MainCardView setNeedsDisplay];
 }
 

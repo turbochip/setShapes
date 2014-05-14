@@ -46,7 +46,7 @@
                                 <rect key="frame" x="20" y="366" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Square"/>
+                                    <segment title="Diamond"/>
                                     <segment title="Circle"/>
                                     <segment title="Squiggle"/>
                                 </segments>
